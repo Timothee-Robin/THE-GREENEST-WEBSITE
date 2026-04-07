@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos - Bilan Carbone</title>
+    <link rel="stylesheet" href="../css/style-bilan.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__logo-title">
+            <a href="index.html">
+                <img src="../img/foot.png" alt="Bigfoot Logo" class="header__logo">
+            </a>
+            <a href="index.html"><span class="header__bigfoot">BIGFOOT</span></a>
+            <span class="header__slogan">The New Footprint Calculator</span>
+        </div>
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li>
+                    <a href="index.html">
+                        <img src="../img/home-icon.png" alt="Home" class="nav-icon home-icon">
+                        <span class="nav-text">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="bilan.html">
+                        <img src="../img/calculate-icon.png" alt="Calculate" class="nav-icon calculate-icon">
+                        <span class="nav-text">Calculate</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="about.html">
+                        <img src="../img/about-icon.png" alt="About" class="nav-icon about-icon">
+                        <span class="nav-text">About</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="result.html#auth-panel" id="auth-nav-link" aria-label="Login">Login</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="about-section">
+            <h2>About Us</h2>
+            <h3>Project Members</h3>
+            <div class="about-members">
+                <div class="about-member">
+                    <strong>Timothée Robin</strong>
+                </div>
+                <div class="about-member">
+                    <strong>Youcef Cheriet</strong>
+                </div>
+                <div class="about-member">
+                    <strong>Clayton Habyalimana</strong>
+                </div>
+                <div class="about-member">
+                    <strong>Ibrahima Sory Diallo</strong>
+                </div>
+                 <div class="about-member">
+                    <strong>Jeremy Lebourgeois</strong>
+                </div>               
+            </div>
+            <h3>Project Objective</h3>
+            <p>
+                This project aims to raise user awareness about their carbon footprint and provide them with tools to
+                calculate and reduce it.
+            </p>
+            <h3>Our Approach</h3>
+            <p>
+                We designed this site to be accessible, interactive, and informative, to help everyone better understand
+                their environmental impact.
+            </p>
+            <h3>Project Repository</h3>
+            <p>
+                The source code for this project is available on GitHub:
+                <a href="https://github.com/Timothee-Robin/THE-GREENEST-WEBSITE" target="_blank">https://github.com/Timothee-Robin/THE-GREENEST-WEBSITE</a>
+            </p>
+        </section>
+    </main>
+    <footer class="footer">
+        <a href="about.html" class="footer__link">About us</a>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/supabaseClient.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/bilans.js"></script>
+    <script src="../js/main.js"></script>
+
+</body>
+
+</html>

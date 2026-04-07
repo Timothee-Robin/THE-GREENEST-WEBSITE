@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FootPrint</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__logo-title">
+            <a href="index.html">
+                <img src="../img/foot.png" alt="Bigfoot Logo" class="header__logo">
+            </a>
+            <a href="index.html"><span class="header__bigfoot">BIGFOOT</span></a>
+            <span class="header__slogan">The New Footprint Calculator</span>
+        </div>
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li>
+                    <a href="index.html">
+                        <img src="../img/home-icon.png" alt="Home" class="nav-icon home-icon">
+                        <span class="nav-text">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="bilan.html">
+                        <img src="../img/calculate-icon.png" alt="Calculate" class="nav-icon calculate-icon">
+                        <span class="nav-text">Calculate</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="about.html">
+                        <img src="../img/about-icon.png" alt="About" class="nav-icon about-icon">
+                        <span class="nav-text">About</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="result.html#auth-panel" id="auth-nav-link" aria-label="Login">Login</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="main-columns">
+            <section class="main-left">
+                <div
+                    style="display: flex; flex-direction: row; align-items: flex-start; justify-content: space-between; width: 100%; gap: 24px;">
+                    <div style="flex: 1 1 0; min-width: 0;">
+                        <h1 class="main-title">Calculate Your<br>Carbon Footprint</h1>
+                        <p class="main-description">Discover your personal environmental impact with our easy-to-use
+                            carbon footprint calculator. By understanding your carbon emissions, you'll gain insight
+                            into how your daily choices affect the planet and identify simple changes you can make to
+                            reduce your impact. Take the first step towards a more sustainable lifestyle today.</p>
+                        <a href="bilan.html" class="main-cta-btn">Calculate</a>
+                    </div>
+                    <div class="main-image-group"
+                        style="flex-shrink: 0; display: flex; flex-direction: column; align-items: flex-end; gap: 12px; min-width: 0;">
+                        <img src="../img/CO2-bubble.png" alt="CO2 Bubble" class="main-bubble-image">
+                        <img src="../img/women.png" alt="CO2 Calculator" class="main-image">
+                    </div>
+                </div>
+            </section>
+            <div class="main-divider"></div>
+            <section class="main-right">
+                <h2 class="main-right-title">Why Measure Your CO2 Emissions?</h2>
+                <p class="main-right-description">Measuring your carbon footprint is the first step toward making a
+                    positive environmental impact. Our calculator helps you identify which aspects of your lifestyle
+                    contribute most to climate change – from transportation and housing to food choices and consumption
+                    habits. Armed with this knowledge, you can make targeted changes that reduce emissions while often
+                    saving money and improving your quality of life. Climate action starts with awareness, and every
+                    reduction in CO2 emissions contributes to a healthier planet for future generations.</p>
+            </section>
+        </div>
+        <section id="graphique-bilan">
+            <div class="graph-header">
+                <h2>Carbon Footprint Breakdown in France (2024)</h2>
+                <div class="graph-box">
+                    <span class="graph-text">10 tons CO2eq/person/year</span>
+                </div>
+            </div>
+            <div class="bar-chart-group">
+                <div class="bar-group">
+                    <div class="bar voiture" data-desc="Car travel represents the largest share of an individual's carbon footprint.">
+                        <span class="bar-label">Car<br>2110 kg</span>
+                    </div>
+                    <div class="bar avion" data-desc="Plane trips have a very high carbon impact per journey.">
+                        <span class="bar-label">Plane<br>480 kg</span>
+                    </div>
+                    <div class="bar autres-transports" data-desc="Other transport (train, bus, etc.).">
+                        <span class="bar-label">Other transport<br>180 kg</span>
+                    </div>
+                    <div class="bar-group-label">I travel</div>
+                </div>
+                <div class="bar-group">
+                    <div class="bar viande" data-desc="Meat consumption generates a lot of CO2 emissions.">
+                        <span class="bar-label">Meat<br>890 kg</span>
+                    </div>
+                    <div class="bar lait" data-desc="Dairy products and cheese also contribute to the carbon footprint.">
+                        <span class="bar-label">Milk and cheese<br>450 kg</span>
+                    </div>
+                    <div class="bar legumes" data-desc="Fruit and vegetables have a lower impact on the climate.">
+                        <span class="bar-label">Fruit and vegetables<br>370 kg</span>
+                    </div>
+                    <div class="bar boissons" data-desc="Drinks include water, soft drinks, etc.">
+                        <span class="bar-label">Drinks<br>240 kg</span>
+                    </div>
+                    <div class="bar-group-label">I eat</div>
+                </div>
+                <div class="bar-group">
+                    <div class="bar gaz" data-desc="Gas and fuel oil heating is highly polluting.">
+                        <span class="bar-label">Gas and fuel oil<br>920 kg</span>
+                    </div>
+                    <div class="bar construction" data-desc="Housing construction and maintenance generate emissions.">
+                        <span class="bar-label">Construction<br>520 kg</span>
+                    </div>
+                    <div class="bar electricite" data-desc="Electricity impact depends on the energy source used.">
+                        <span class="bar-label">Electricity<br>280 kg</span>
+                    </div>
+                    <div class="bar-group-label">Housing</div>
+                </div>
+                <div class="bar-group">
+                    <div class="bar maison" data-desc="Home maintenance and equipment also count.">
+                        <span class="bar-label">Home<br>680 kg</span>
+                    </div>
+                    <div class="bar loisirs" data-desc="Leisure includes sports, cultural activities, etc.">
+                        <span class="bar-label">Leisure<br>350 kg</span>
+                    </div>
+                    <div class="bar vetements" data-desc="Clothing manufacturing has a significant impact.">
+                        <span class="bar-label">Clothing<br>220 kg</span>
+                    </div>
+                    <div class="bar-group-label">I buy</div>
+                </div>
+                <div class="bar-group">
+                    <div class="bar depense" data-desc="Public spending includes health, education, infrastructure, etc.">
+                        <span class="bar-label">Public spending<br>270 kg</span>
+                    </div>
+                    <div class="bar autres-depenses" data-desc="Other public spending.">
+                        <span class="bar-label">Other<br>260 kg</span>
+                    </div>
+                    <div class="bar-group-label">Public spending</div>
+                </div>
+            </div>
+            <div id="bar-desc" class="bar-desc"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a href="about.html" class="footer__link">About us</a>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/supabaseClient.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/bilans.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
