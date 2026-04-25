@@ -1,0 +1,343 @@
+/* --- Fixed Header Bar with gap --- */
+.header {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    right: 18px;
+    width: auto;
+    z-index: 100;
+    background: linear-gradient(to right, #b0fdd4 60%, #4ab573 100%);
+    box-shadow: 0 2px 16px rgba(23, 76, 43, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    height: 72px;
+    border-radius: 18px;
+}
+.header__logo-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: 18px;
+}
+.header__logo {
+    height: 48px;
+    width: auto;
+    margin: 0;
+}
+.header__bigfoot {
+    font-size: 2.3rem;
+    font-weight: 900;
+    color: #174c2b;
+    letter-spacing: 1px;
+    font-family: 'Inter', Arial, sans-serif;
+}
+.header__slogan {
+    font-size: 1.25rem;
+    color: #2ebd6a;
+    font-weight: 500;
+    margin-left: 10px;
+    font-family: 'Inter', Arial, sans-serif;
+}
+.header__title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #eafaf1;
+    letter-spacing: 0.5px;
+    margin-left: 0;
+    margin-right: 24px;
+}
+.header__nav-list {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+    margin: 0 40px 0 0;
+    padding: 0;
+}
+.header__nav-list a {
+    color: #eafaf1;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.2s, background 0.2s;
+    padding: 8px 18px;
+    border-radius: 8px;
+}
+.header__nav-list a:hover, .header__nav-list a:focus {
+    background: #2ebd6a;
+    color: #174c2b;
+}
+
+.nav-icon {
+    display: none; 
+    width: 24px; 
+    height: 24px;
+    margin-right: 8px; 
+}
+
+@media (max-width: 1200px) { 
+    .header__slogan {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) { 
+    .header__nav-list a {
+        padding: 8px 12px; 
+    }
+    .nav-text {
+        display: none; 
+    }
+    .nav-icon {
+        display: inline-block; 
+        margin-right: 0; 
+    }
+    .header__nav-list {
+        gap: 18px; 
+    }
+}
+
+@media (max-width: 700px) {
+    .header {
+        top: 6px;
+        left: 6px;
+        right: 6px;
+        height: auto;
+        border-radius: 12px;
+    }
+    .header__bigfoot {
+        display: none; 
+    }
+    .header__logo-title {
+        margin-left: 10px; 
+    }
+    .header__nav-list {
+        margin-right: 10px; 
+    }
+}
+
+/* --- Main Content Styles --- */
+main {
+    max-width: 600px;
+    margin: 2.5em auto 0 auto;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(76,175,80,0.07);
+    padding: 2.5em 2em 2em 2em;
+    margin-top: 12em;
+
+}
+
+.bar-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5em;
+    gap: 1em;
+}
+.bar-label {
+    width: 120px;
+    font-weight: 600;
+    color: #444;
+    font-size: 1.1em;
+}
+.bar {
+    height: 28px;
+    display: flex;
+    align-items: center;
+    color: #111;
+    text-align: right;
+    padding-right: 18px;
+    font-size: 1.1em;
+    font-weight: 600;
+    border-radius: 14px;
+    transition: width 0.5s cubic-bezier(.4,2,.6,1), background 0.3s;
+    min-width: 2.5em;
+    box-shadow: 0 2px 8px rgba(76,175,80,0.10);
+}
+
+#analysis-section {
+    margin-top: 3em;
+    padding: 1.5em;
+    background-color: #f9f9f9; 
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.07); 
+}
+
+#analysis-title {
+    color: #1e7c4a; 
+    font-size: 1.6em;
+    font-weight: 700;
+    margin-bottom: 0.8em;
+    text-align: center;
+}
+
+#analysis-text p {
+    color: #333; 
+    font-size: 1.05em;
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
+
+#analysis-text strong {
+    color: #111; 
+}
+
+#analysis-text ul {
+    list-style-type: disc; 
+    margin-left: 20px; 
+    padding-left: 1em;
+}
+
+#analysis-text ul li {
+    margin-bottom: 0.6em; 
+    font-size: 1em;
+}
+
+.account-panel,
+.history-panel {
+    margin-top: 2em;
+    padding: 1.2em;
+    border-radius: 12px;
+    background: #f6fff8;
+    border: 1px solid #d9efe0;
+}
+
+.account-panel h2,
+.history-panel h2 {
+    margin-top: 0;
+    color: #1e7c4a;
+}
+
+.auth-fields {
+    display: grid;
+    gap: 10px;
+    max-width: 360px;
+}
+
+.auth-fields input {
+    border: 1px solid #b9d8c4;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.auth-actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.auth-actions button,
+#btn-sign-out,
+.btn-delete-bilan {
+    border: none;
+    border-radius: 8px;
+    background: #2ebd6a;
+    color: #fff;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.auth-message,
+.history-message {
+    min-height: 1.2em;
+    font-size: 0.95rem;
+}
+
+.history-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    display: grid;
+    gap: 10px;
+}
+
+.history-item {
+    padding: 10px;
+    border: 1px solid #d8e8dd;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.history-item-main {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+}
+
+.history-item-detail {
+    font-size: 0.9rem;
+    color: #2b4f39;
+    margin-bottom: 8px;
+}
+
+@media (max-width: 700px) {
+    main {
+        max-width: 98vw;
+        padding: 1em 0.5em;
+    }
+    .bar-label {
+        width: 80px;
+        font-size: 1em;
+    }
+    .bar {
+        font-size: 1em;
+        padding-right: 10px;
+    }
+}
+
+/* --- Total Emissions Section --- */
+.total-emissions {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 30px;
+    background: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.total-emissions h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.total-emissions .total-value {
+    font-size: 2em;
+    font-weight: bold;
+    color: #27ae60;
+    margin: 0;
+}
+
+/* --- Footer --- */
+.footer {
+    background: #1e7c4a;
+    color: #eafaf1;
+    text-align: center;
+    padding: 24px 0 12px 0;
+    font-size: 1rem;
+    position: static;
+    width: 100%;
+    z-index: 10;
+    margin-top: 32px;
+}
+
+.footer__link {
+    color: #eafaf1;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 8px 18px;
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.footer__link:hover,
+.footer__link:focus {
+    background: #2ebd6a;
+    color: #174c2b;
+}
