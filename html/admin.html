@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Bigfoot</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style-admin.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__logo-title">
+            <a href="index.html">
+                <img src="../img/foot.png" alt="Bigfoot Logo" class="header__logo">
+            </a>
+            <a href="index.html"><span class="header__bigfoot">BIGFOOT</span></a>
+            <span class="header__slogan">The New Footprint Calculator</span>
+        </div>
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="bilan.html">Calculate</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="admin.html" aria-current="page">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="admin-main">
+        <section class="admin-topbar">
+            <h1>Admin Dashboard</h1>
+            <button id="btn-logout" type="button">Log out</button>
+        </section>
+
+        <p id="admin-status" class="admin-status" aria-live="polite">Checking access...</p>
+
+        <section class="admin-grid">
+            <article class="admin-card">
+                <h2>Global Bilan Stats</h2>
+                <div class="stats-row">
+                    <span>Total bilans</span>
+                    <strong id="stat-total-bilans">-</strong>
+                </div>
+                <div class="stats-row">
+                    <span>Average total score</span>
+                    <strong id="stat-avg-total">-</strong>
+                </div>
+            </article>
+
+            <article class="admin-card admin-users-card">
+                <h2>Users</h2>
+                <div class="table-wrap">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Email</th>
+                                <th>Created at</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="users-tbody">
+                            <tr>
+                                <td colspan="3">Loading users...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a href="about.html" class="footer__link">About us</a>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/supabaseClient.js"></script>
+    <script src="../js/admin.js"></script>
+</body>
+
+</html>
