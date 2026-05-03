@@ -1,4 +1,13 @@
 /* --- Fixed Header Bar with gap --- */
+body {
+    background: radial-gradient(circle at top left, #f7fff7 0%, #ecfff4 35%, #f0fff0 100%);
+    font-family: 'Inter', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
 .header {
     position: fixed;
     top: 18px;
@@ -6,8 +15,10 @@
     right: 18px;
     width: auto;
     z-index: 100;
-    background: linear-gradient(to right, #b0fdd4 60%, #4ab573 100%);
-    box-shadow: 0 2px 16px rgba(23, 76, 43, 0.08);
+    background: linear-gradient(135deg, rgba(255,255,255,0.92), rgba(226,255,236,0.96));
+    border: 1px solid rgba(46, 189, 106, 0.18);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 18px 48px rgba(23, 76, 43, 0.10);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -119,14 +130,14 @@
 
 /* --- Main Content Styles --- */
 main {
-    max-width: 600px;
+    max-width: 640px;
     margin: 2.5em auto 0 auto;
-    background: #ffffff;
+    background: rgba(255,255,255,0.95);
+    border: 1px solid rgba(23, 180, 88, 0.16);
     border-radius: 18px;
-    box-shadow: 0 4px 24px rgba(76,175,80,0.07);
+    box-shadow: 0 18px 48px rgba(76,175,80,0.08);
     padding: 2.5em 2em 2em 2em;
     margin-top: 12em;
-
 }
 
 .bar-container {
