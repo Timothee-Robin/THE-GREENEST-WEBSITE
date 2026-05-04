@@ -83,7 +83,7 @@ body {
     padding: 0;
 }
 .header__nav-list a {
-    color: #eafaf1;
+    color: #16a085;
     text-decoration: none;
     font-weight: 600;
     font-size: 1.1rem;
@@ -233,7 +233,7 @@ main {
         padding: 8px 12px; 
     }
     .nav-text {
-        display: none; 
+        display: inline;
     }
     .nav-icon {
         display: inline-block; 
