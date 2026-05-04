@@ -29,7 +29,9 @@ function haversineDistance(lat1, lon1, lat2, lon2) {
 }
 
 async function getCountryCoordinates(country) {
-    const res = await fetch(`https://restcountries.com/v3.1/name/${country}`);
+    // Green IT Optimization: Filtering the API response using "?fields=name,latlng"
+    // This reduces the JSON payload size by approximately 90%, minimizing network data transfer.
+    const res = await fetch(`https://restcountries.com/v3.1/name/${country}?fields=name,latlng`);
     const data = await res.json();
     return {
       lat: data[0].latlng[0],
