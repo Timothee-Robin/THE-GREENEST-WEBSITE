@@ -1,0 +1,24 @@
+{
+  "name": "the-greenest-website",
+  "version": "1.0.0",
+  "description": "BIGFOOT is a multi-step web app that helps users estimate their yearly carbon footprint across five categories:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build":"parcel build html/index.html --dist-dir dist --public-url /"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Timothee-Robin/THE-GREENEST-WEBSITE.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Timothee-Robin/THE-GREENEST-WEBSITE/issues"
+  },
+  "homepage": "https://github.com/Timothee-Robin/THE-GREENEST-WEBSITE#readme",
+  "devDependencies": {
+    "parcel": "^2.16.4"
+  }
+}
