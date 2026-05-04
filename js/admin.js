@@ -49,6 +49,10 @@
 
     async function fetchUsers() {
         const client = getClient();
+        
+        // Green IT optimization: We use a strict projection (selecting only the specific 
+        // fields we need: id, email, created_at) instead of fetching everything with select('*').
+        // This significantly reduces network bandwidth usage and memory footprint.
         const { data, error } = await client
             .from("profiles")
             .select("id, email, created_at")
@@ -104,10 +108,15 @@
         });
     }
 
+    // Admin operation: Deletes a user and their associated assessment history (bilans).
+    // Security: This function is only accessible after the user's admin role has been verified 
+    // by the requireAdmin() check. It uses parameterized queries via the Supabase client, 
+    // which prevents SQL injection attacks.
     async function deleteUserAccountData(userId) {
         const client = getClient();
 
-        // Delete dependent bilans first for FK safety when cascade is not configured.
+        // Security & Data Integrity: Delete dependent records (bilans) first to avoid orphan data 
+        // and to safely enforce foreign key constraints before deleting the profile.
         const { error: bilansError } = await client
             .from("bilans")
             .delete()
@@ -115,6 +124,7 @@
 
         if (bilansError) throw bilansError;
 
+        // Finally, safely delete the user's profile.
         const { error: profileError } = await client
             .from("profiles")
             .delete()
